@@ -1,13 +1,13 @@
 Package: kbolster
-Title: What the Package Does (One Line, Title Case)
+Title: Kenny Bolster's functions for chemical oceanography
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
+    person(given = "Kenneth",
+           family = "Bolster",
            role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
+           email = "kennybolster@gmail.com",
+           comment = c(ORCID = "0000-0002-5985-9990"))
+Description: This is a continually updating version of a package containing the functions I use frequently
 License: What license it uses
 Encoding: UTF-8
 LazyData: true
