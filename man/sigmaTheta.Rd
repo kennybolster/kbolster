@@ -16,7 +16,8 @@ potential density in units of kg/m^3
 }
 \description{
 Given the temperature and salinity of a seawater sample, calculate what
-its potential density would be at sea level
+its potential density would be at sea level. Based on an approximation to
+the UNESCO 1983 (EOS 80) polynomial.
 }
 \examples{
 sigmaTheta(t, s)
