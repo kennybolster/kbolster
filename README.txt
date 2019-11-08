@@ -1,0 +1,1 @@
+This is a personal R package, with functions that I've found myself copying and pasting into various scripts a lot, and I think it would be easier to have them loaded into a single package.
