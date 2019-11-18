@@ -4,7 +4,7 @@
 #' dealing with the files manually.
 #' @return the IDP, a data frame/tibble
 #' @export
-#' @examples idp <- getIDP()
+#' @examples idp <- getIdp()
 
 getIdp <- function(){
   idp <- readRDS(url(
