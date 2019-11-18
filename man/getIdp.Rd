@@ -14,5 +14,5 @@ The 2017 IDP, arranged in a useful format to work with in R, rather than
 dealing with the files manually.
 }
 \examples{
-idp <- getIDP()
+idp <- getIdp()
 }
