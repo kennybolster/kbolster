@@ -4,12 +4,14 @@
 \alias{sigmaTheta}
 \title{Calculate potential density}
 \usage{
-sigmaTheta(t, s)
+sigmaTheta(t, s, p)
 }
 \arguments{
 \item{t}{temperature in deg C}
 
 \item{s}{salinity, in absolute salinity units}
+
+\item{p}{pressure, in dbar}
 }
 \value{
 potential density in units of kg/m^3
