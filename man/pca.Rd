@@ -10,7 +10,9 @@ pca(df, scale = TRUE)
 \item{df}{The data frame}
 }
 \value{
-a list containing weights of the analysis, principal components, the percent variance of each component, and the factor loadings
+a list containing weights of the analysis, principal components,
+the percent variance of each component, the factor loadings, and projections
+of the data frame onto the principal components.
 }
 \description{
 Given a data frame, perform a principal component analysis

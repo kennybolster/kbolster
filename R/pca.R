@@ -1,8 +1,10 @@
 #' Principal component analysis
-#' 
+#'
 #' Given a data frame, perform a principal component analysis
 #' @param df The data frame
-#' @return a list containing weights of the analysis, principal components, the percent variance of each component, and the factor loadings
+#' @return a list containing weights of the analysis, principal components,
+#' the percent variance of each component, the factor loadings, and projections
+#' of the data frame onto the principal components.
 #' @export
 #' @example pca(iris[,1:4])
 pca <- function(df, scale = TRUE){
