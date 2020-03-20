@@ -20,6 +20,7 @@ pca <- function(df, scale = TRUE){
   pov <- values / sum(values)
   ar = vectors %*% diag(values)^.5
   row.names(ar) <- colnames(df)
+  proj <- as.matrix(df) %*% vectors
   list('weights' = values, 'components' = vectors, 'percent_variance' = pov,
-       'factor_loadings' = ar)
+       'factor_loadings' = ar, 'projection' = proj)
 }
