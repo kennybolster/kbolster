@@ -4,8 +4,16 @@
 \alias{sectionPlot}
 \title{Oceanographic section plot}
 \usage{
-sectionPlot(dist, depth, c, title = "", xlab = "Distance (km)",
-  ylab = "Depth (m)", units = "nM", name = "Fe")
+sectionPlot(
+  dist,
+  depth,
+  c,
+  title = "",
+  xlab = "Distance (km)",
+  ylab = "Depth (m)",
+  units = "nM",
+  name = "Fe"
+)
 }
 \arguments{
 \item{dist}{distance along the section}
