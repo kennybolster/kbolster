@@ -7,17 +7,18 @@
 #' @param depth depth of samples
 #' @param c concentration of the element in the samples
 #' @param title title to put on the plot, defaults to none
-#' @param xlab label for the x axis, defaults to 'Distance (km)'
+#' @param xlab label for the x axis
 #' @param ylab label for the y axis, defaults to 'Depth (m)'
-#' @param units what unit is being used for the concentraiton, defaults
-#' to 'nM'
-#' @param name what element is being plotted, defaults to 'Fe'
+#' @param units what unit is being used for the concentraiton
+#' @param name what element is being plotted
+#' @param duplicate passed to akima::interp. What should be the result if there are duplicate 
+#' measurements at the same coordinate? Defaults to "mean"
 #' @export
 #' @examples sectionPlot(dist, depth, c)
 #'
 
-sectionPlot <- function(dist, depth, c, title = '', xlab = 'Distance (km)',
-                        ylab = 'Depth (m)', units = 'nM', name = 'Fe'){
+sectionPlot <- function(dist, depth, c, title = '', xlab = '',
+                        ylab = 'Depth (m)', units = '', name = '', duplicate = 'mean'){
   # from vectors of irregularly spaced oceanographic points, generate a section plot
   # dist: x axis coordinate. Can be distance as well as degrees longitude or latitude
   # depth: y axis coordinate
@@ -30,7 +31,7 @@ sectionPlot <- function(dist, depth, c, title = '', xlab = 'Distance (km)',
   require(akima)
   require(ggplot2)
   require(stringr)
-  interped <- interp2xyz(interp(dist, depth, c), data.frame = T)
+  interped <- interp2xyz(interp(dist, depth, c, duplicate = duplicate), data.frame = T)
   ggplot(interped, mapping = aes(x, y)) +
     geom_raster(aes(fill = z)) +
     geom_contour(aes(z = z), color = 'white', alpha = .5) +
