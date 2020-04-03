@@ -20,7 +20,13 @@ pca <- function(df, scale = TRUE){
   pov <- values / sum(values)
   ar = vectors %*% diag(values)^.5
   row.names(ar) <- colnames(df)
-  proj <- as.matrix(df) %*% vectors
+  datamat <- as.matrix(df)
+  if(scale){
+    scaledmat <- apply(datamat, 2, function(v){(v - mean(v))/sd(v)})
+    proj <- scaledmat %*% vectors
+  }else{
+    proj <- datamat %*% vectors
+  }
   list('weights' = values, 'components' = vectors, 'percent_variance' = pov,
        'factor_loadings' = ar, 'projection' = proj)
 }

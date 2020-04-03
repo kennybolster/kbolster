@@ -9,10 +9,11 @@ sectionPlot(
   depth,
   c,
   title = "",
-  xlab = "Distance (km)",
+  xlab = "",
   ylab = "Depth (m)",
-  units = "nM",
-  name = "Fe"
+  units = "",
+  name = "",
+  duplicate = "mean"
 )
 }
 \arguments{
@@ -24,14 +25,16 @@ sectionPlot(
 
 \item{title}{title to put on the plot, defaults to none}
 
-\item{xlab}{label for the x axis, defaults to 'Distance (km)'}
+\item{xlab}{label for the x axis}
 
 \item{ylab}{label for the y axis, defaults to 'Depth (m)'}
 
-\item{units}{what unit is being used for the concentraiton, defaults
-to 'nM'}
+\item{units}{what unit is being used for the concentraiton}
 
-\item{name}{what element is being plotted, defaults to 'Fe'}
+\item{name}{what element is being plotted}
+
+\item{duplicate}{passed to akima::interp. What should be the result if there are duplicate 
+measurements at the same coordinate? Defaults to "mean"}
 }
 \description{
 Given measurements of sample locations and the concentraiton of an
